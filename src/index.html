@@ -13,13 +13,34 @@
     <!-- Header section -->
     <header class="header">
       <div class="header__content">
-        <h1 class="header__title">Personal Links Collection</h1>
+        <h1 class="header__title">Links Collection</h1>
       </div>
 
       <div class="header__favourite">
         <i class="fas fa-heart header__favourite-icon"></i>
       </div>
     </header>
+
+    <div class="container">
+      <!-- Nav section -->
+      <div class="nav">
+        <select name="sortBy" id="sortBy" class="nav__sortBy">
+          <option value="">By Last Edited</option>
+          <option value="">By Recently Created</option>
+          <option value="">By Alphabetically</option>
+        </select>
+
+        <i class="fas fa-plus-circle nav__add-btn"></i>
+
+        <input
+          type="text"
+          name="searchInput"
+          id="search"
+          class="nav__search"
+          placeholder="Search ..."
+        />
+      </div>
+    </div>
 
     <script src="index.js"></script>
   </body>
