@@ -3,3 +3,23 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/*
+this defines what 1rem is (default 1rem = 16px but here 
+1rem = 10px -> with percentage 62.5%
+*/
+html {
+  font-size: 62.5%;
+
+  @include respond(tab-port) {
+    font-size: 60%;
+  }
+
+  @include respond(phone) {
+    font-size: 55%;
+  }
+
+  @include respond(small-phone) {
+    font-size: 40%;
+  }
+}

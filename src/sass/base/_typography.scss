@@ -1,0 +1,12 @@
+// Header section
+.header {
+  &__title {
+    color: $color-white;
+    font-size: 3rem;
+  }
+
+  &__favourite-icon {
+    color: $color-white;
+    font-size: 2.5rem;
+  }
+}
