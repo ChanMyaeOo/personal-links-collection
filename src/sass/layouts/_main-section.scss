@@ -1,12 +1,8 @@
 .container {
-  width: 75%;
+  width: 80%;
   margin: 0 auto;
 
-  @include respond(tab-port) {
-    width: 80%;
-  }
-
-  @include respond(phone) {
+  @include respond(tab-land) {
     width: 90%;
   }
 }
