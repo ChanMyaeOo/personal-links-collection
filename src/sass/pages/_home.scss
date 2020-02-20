@@ -30,8 +30,7 @@
       cursor: pointer;
       box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
       transition: transform 0.3s;
-      max-height: 4rem;
-      max-width: 14rem;
+      max-height: 4.5rem;
       text-align: center;
       align-self: center;
     }
@@ -46,12 +45,14 @@
   }
 
   &__add {
+    max-width: 14rem;
     @include respond(tab-port) {
       grid-column: 1/4;
     }
   }
 
   &__remove {
+    max-width: 16rem;
     justify-self: end;
 
     @include respond(tab-port) {
