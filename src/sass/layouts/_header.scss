@@ -4,8 +4,11 @@
   height: 10vh;
   background-image: $color-bg-primary;
   text-align: center;
+
   @include d-flex;
   position: relative;
+
+  position: fixed;
 
   &__favourite {
     position: absolute;

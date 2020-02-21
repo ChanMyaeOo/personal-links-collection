@@ -10,3 +10,68 @@
     font-size: 2.5rem;
   }
 }
+
+// Link category filter section
+.filter {
+  &__add,
+  &__remove {
+    &:link,
+    &:visited {
+      font-size: $default-font-size;
+      color: $color-white;
+    }
+  }
+
+  &__content {
+    & > button {
+      font-size: 1.4rem;
+      color: $color-white;
+    }
+  }
+}
+
+// Link data card section
+.card {
+  line-height: 1.5;
+  &__share {
+    font-size: $default-font-size;
+    color: $color-white;
+  }
+
+  &__fav {
+    font-size: $default-font-size;
+  }
+
+  &__title {
+    font-size: 2rem;
+    color: $color-white;
+
+    &:hover {
+      color: $color-blue;
+    }
+  }
+
+  &__description {
+    font-size: 1.4rem;
+  }
+
+  &__edit {
+    font-size: $default-font-size;
+    color: $color-white;
+
+    &:hover {
+      cursor: pointer;
+      color: $color-black;
+    }
+  }
+
+  &__delete {
+    font-size: $default-font-size;
+    color: $color-white;
+
+    &:hover {
+      cursor: pointer;
+      color: $color-red;
+    }
+  }
+}

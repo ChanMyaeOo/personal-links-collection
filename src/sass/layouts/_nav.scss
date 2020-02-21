@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   padding: 6rem 0;
+  padding-top: 20vh;
 
   &__sortBy {
     height: 3.5rem;
