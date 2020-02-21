@@ -1,0 +1,7 @@
+.footer {
+  width: 100%;
+  height: 5rem;
+  background-image: $color-bg-primary;
+  margin-top: 4rem;
+  @include d-flex;
+}

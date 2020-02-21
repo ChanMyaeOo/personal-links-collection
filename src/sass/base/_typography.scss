@@ -75,3 +75,16 @@
     }
   }
 }
+
+// Footer section
+.footer {
+  & > p {
+    font-size: $default-font-size;
+    color: $color-white;
+  }
+
+  & a:link,
+  & a:visited {
+    color: $color-white;
+  }
+}
