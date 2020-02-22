@@ -12,5 +12,6 @@ export const elements = {
   cardWrapEl: document.querySelector('#card-wrap'),
   catAddFormEl: document.querySelector('#cat-add-form'),
   categoryContent: document.querySelector('#category-content'),
-  catRemoveFormEl: document.querySelector('#cat-remove-form')
+  catRemoveFormEl: document.querySelector('#cat-remove-form'),
+  linkCategoryEl: document.querySelector('#link-category')
 };

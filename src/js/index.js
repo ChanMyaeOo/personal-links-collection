@@ -53,5 +53,36 @@ export const removeLinkCategory = category => {
 
     elements.categoryContent.innerHTML = '';
     renderCategory(categoryList);
+
+    elements.linkCategoryEl.innerHTML = '';
+    injectCategory(categoryList);
   }
 };
+
+// Handle for adding category
+elements.catAddFormEl.addEventListener('submit', e => {
+  e.preventDefault();
+  const category = e.target.elements.catAddInput.value;
+
+  if (category) {
+    addLinkCategory(category);
+    e.target.elements.catAddInput.value = '';
+    elements.catAddModalEl.classList.remove('category-add-modal-active');
+
+    elements.linkCategoryEl.innerHTML = '';
+    injectCategory(categoryList);
+  }
+});
+
+// Injecting link category to the dropdown list
+export const injectCategory = list => {
+  const lists = list.slice(1, list.length);
+  lists.forEach(data => {
+    const markup = `
+      <option value="${data}">${data}</option>
+    `;
+    elements.linkCategoryEl.insertAdjacentHTML('afterbegin', markup);
+  });
+};
+
+injectCategory(categoryList);

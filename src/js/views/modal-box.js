@@ -94,18 +94,6 @@ export const renderDataCard = list => {
   });
 };
 
-// Handle for adding category
-elements.catAddFormEl.addEventListener('submit', e => {
-  e.preventDefault();
-  const category = e.target.elements.catAddInput.value;
-
-  if (category) {
-    addLinkCategory(category);
-    e.target.elements.catAddInput.value = '';
-    elements.catAddModalEl.classList.remove('category-add-modal-active');
-  }
-});
-
 // Rendering category
 export const renderCategory = list => {
   list.forEach(data => {
