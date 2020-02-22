@@ -220,6 +220,55 @@
       <p>Designed & Created by <a href="#">Chan Myae Oo</a></p>
     </div>
 
+    <!-- Link data add form (modal box) section -->
+    <div class="data-add-modal">
+      <form class="form">
+        <input
+          type="text"
+          name="linkTitle"
+          id="link-title"
+          class="title-input"
+          placeholder="Enter Title"
+        />
+
+        <textarea
+          name="linkDescription"
+          id="link-description"
+          cols="30"
+          rows="3"
+          class="description-input"
+          placeholder="Enter Description"
+        ></textarea>
+
+        <textarea
+          name="linkUrl"
+          id="link-url"
+          cols="30"
+          rows="5"
+          class="url-input"
+          placeholder="Enter Url"
+        ></textarea>
+
+        <label for="link-category">
+          <span class="link-category">Choose Category : </span>
+
+          <select
+            name="linkCategory"
+            id="link-category"
+            class="category-select"
+          >
+            <option value="">Javascript</option>
+            <option value="">Programming</option>
+            <option value="">Knowledge</option>
+            <option value="">Design</option>
+          </select>
+        </label>
+
+        <input type="submit" value="Add to List" class="link-add-submit" />
+
+        <i class="far fa-times-circle form__close"></i>
+      </form>
+    </div>
     <script src="index.js"></script>
   </body>
 </html>

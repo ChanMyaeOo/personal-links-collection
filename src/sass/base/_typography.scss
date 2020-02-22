@@ -88,3 +88,29 @@
     color: $color-white;
   }
 }
+
+// Link data add form (modal box) section
+.form__close {
+  font-size: 2.5rem;
+  color: $color-grey;
+
+  &:hover {
+    color: $color-black;
+  }
+}
+.link-category {
+  font-size: 1.7rem;
+  color: $color-white;
+  background: $color-grey;
+}
+
+.link-add-submit {
+  font-size: $default-font-size;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: $color-grey;
+
+  &:hover {
+    color: $color-blueviolet;
+  }
+}
