@@ -10,6 +10,22 @@
     flex-direction: column;
     position: relative;
 
+    @include respond(tab-land) {
+      width: 35%;
+    }
+
+    @include respond(tab-port) {
+      width: 45%;
+    }
+
+    @include respond(phone) {
+      width: 60%;
+    }
+
+    @include respond(small-phone) {
+      width: 75%;
+    }
+
     &__close {
       position: absolute;
       top: 1rem;
@@ -23,6 +39,7 @@
     height: 3rem;
     padding: 1rem;
     border-radius: 3px;
+    width: 80%;
 
     &:focus {
       border: 1px solid $color-grey;
