@@ -12,3 +12,13 @@ elements.dataAddBtnEl.addEventListener('click', e => {
 elements.closeFormEl.addEventListener('click', e => {
   elements.dataAddModalEl.classList.remove('data-add-modal-active');
 });
+
+// Handle to open category add form
+elements.catAddBtnEl.addEventListener('click', e => {
+  elements.catAddModalEl.classList.add('category-add-modal-active');
+});
+
+// Handle to close category add form
+elements.closeCatFormEl.addEventListener('click', e => {
+  elements.catAddModalEl.classList.remove('category-add-modal-active');
+});
