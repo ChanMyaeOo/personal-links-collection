@@ -1,0 +1,100 @@
+.data-edit-modal {
+  @include modal-overlay;
+
+  .form-edit {
+    @include d-flex;
+    flex-direction: column;
+    background: $color-white;
+    padding: 2rem;
+    width: 30%;
+    border-radius: 3px;
+    position: relative;
+
+    @include respond(tab-land) {
+      width: 35%;
+    }
+
+    @include respond(tab-port) {
+      width: 50%;
+    }
+
+    @include respond(phone) {
+      width: 70%;
+    }
+
+    @include respond(small-phone) {
+      width: 80%;
+    }
+
+    &__close-edit {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      cursor: pointer;
+    }
+
+    .title-input-edit {
+      margin: 3rem 0 1.5rem 0;
+      width: 80%;
+      height: 3rem;
+      padding: 1rem;
+      border-radius: 3px;
+
+      &:focus {
+        border: 1px solid $color-grey;
+        outline: none;
+      }
+    }
+
+    .description-input-edit {
+      margin: 1.5rem;
+      padding: 1rem;
+      border-radius: 3px;
+      width: 80%;
+
+      &:focus {
+        border: 1px solid $color-grey;
+        outline: none;
+      }
+    }
+
+    .url-input-edit {
+      margin: 1.5rem;
+      padding: 1rem;
+      border-radius: 3px;
+      width: 80%;
+
+      &:focus {
+        border: 1px solid $color-grey;
+        outline: none;
+      }
+    }
+
+    .category-input-edit {
+      width: 80%;
+    }
+
+    .category-select-edit {
+      margin: 1.5rem;
+      height: 3rem;
+
+      &:focus {
+        border: 1px solid $color-grey;
+        outline: none;
+      }
+    }
+
+    .link-edit-submit {
+      margin: 1.5rem;
+      height: 3rem;
+      border-radius: 3px;
+      padding: 0.5rem;
+      cursor: pointer;
+    }
+  }
+}
+
+.data-edit-modal-active {
+  visibility: visible;
+  opacity: 1;
+}

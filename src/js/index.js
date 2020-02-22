@@ -86,3 +86,20 @@ export const injectCategory = list => {
 };
 
 injectCategory(categoryList);
+
+// Editing data card
+export const renderCardEdit = () => {
+  const cardEditBtn = document.querySelectorAll('#card-edit');
+  cardEditBtn.forEach(btn => {
+    btn.addEventListener('click', e => {
+      console.log(e.target.parentNode.parentNode.dataset.card);
+      showEditForm();
+    });
+  });
+};
+
+renderCardEdit();
+
+const showEditForm = () => {
+  elements.dataEditModalEl.classList.add('data-edit-modal-active');
+};

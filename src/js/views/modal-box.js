@@ -1,6 +1,7 @@
 import icon from '../../img/icons.svg';
 import { elements } from './base';
-import { addLinkData, addLinkCategory, removeLinkCategory } from '../index';
+import { addLinkData, renderCardEdit, removeLinkCategory } from '../index';
+import uuid from '../uuid';
 
 // Handle to open link data add form
 elements.dataAddBtnEl.addEventListener('click', e => {
@@ -10,6 +11,16 @@ elements.dataAddBtnEl.addEventListener('click', e => {
 // Handle to close link data add form
 elements.closeFormEl.addEventListener('click', e => {
   elements.dataAddModalEl.classList.remove('data-add-modal-active');
+});
+
+// Handle to open link data edit form
+// elements.dataEditBtnEl.addEventListener('click', e => {
+//   elements.dataEditModalEl.classList.add('data-edit-modal-active');
+// });
+
+// Handle to close link data edit form
+elements.closeFormEditEl.addEventListener('click', e => {
+  elements.dataEditModalEl.classList.remove('data-edit-modal-active');
 });
 
 // Handle to open category add form
@@ -43,6 +54,7 @@ elements.dataAddFormEl.addEventListener('submit', e => {
   const linkCategory =
     addDataCategory.options[addDataCategory.selectedIndex].value;
   const linkData = {
+    id: uuid(),
     title: linkTitle,
     description:
       linkDescription !== '' ? linkDescription : ':( ------------- :(',
@@ -58,6 +70,8 @@ elements.dataAddFormEl.addEventListener('submit', e => {
     e.target.elements.linkUrl.value = '';
 
     elements.dataAddModalEl.classList.remove('data-add-modal-active');
+
+    renderCardEdit();
   }
 });
 
@@ -65,7 +79,7 @@ elements.dataAddFormEl.addEventListener('submit', e => {
 export const renderDataCard = list => {
   list.forEach(data => {
     const markup = `
-    <div class="card">
+    <div class="card" data-card="${data.id}">
         <div class="card__top">
             <div class="card__share">Share</div>
             <div class="card__fav">
@@ -83,9 +97,9 @@ export const renderDataCard = list => {
         </div>
 
         <div class="card__bottom">
-            <i class="far fa-edit card__edit"></i>
+            <i class="far fa-edit card__edit" id="card-edit"></i>
 
-            <i class="far fa-trash-alt card__delete"></i>
+            <i class="far fa-trash-alt card__delete" id="card-delete"></i>
         </div>
     </div>
     `;
@@ -116,3 +130,5 @@ elements.catRemoveFormEl.addEventListener('submit', e => {
     elements.catRemoveModalEl.classList.remove('category-remove-modal-active');
   }
 });
+
+console.log(uuid());

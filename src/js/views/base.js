@@ -1,6 +1,8 @@
 export const elements = {
   closeFormEl: document.querySelector('#link-add-form-close'),
   dataAddModalEl: document.querySelector('.data-add-modal'),
+  closeFormEditEl: document.querySelector('#link-edit-form-close'),
+  dataEditModalEl: document.querySelector('.data-edit-modal'),
   dataAddBtnEl: document.querySelector('#nav-add-btn'),
   catAddBtnEl: document.querySelector('#add-cat-btn'),
   catAddModalEl: document.querySelector('#cat-add-modal'),

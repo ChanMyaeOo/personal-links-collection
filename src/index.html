@@ -270,6 +270,59 @@
       </form>
     </div>
 
+    <!-- Link data update form section -->
+    <div class="data-edit-modal">
+      <form class="form-edit" id="data-edit-form">
+        <input
+          type="text"
+          name="linkTitleEdit"
+          id="link-title-edit"
+          class="title-input-edit"
+          placeholder="Enter Title"
+        />
+
+        <textarea
+          name="linkDescriptionEdit"
+          id="link-description-edit"
+          cols="30"
+          rows="3"
+          class="description-input-edit"
+          placeholder="Enter Description"
+        ></textarea>
+
+        <textarea
+          name="linkUrlEdit"
+          id="link-url-edit"
+          cols="30"
+          rows="5"
+          class="url-input-edit"
+          placeholder="Enter Url"
+        ></textarea>
+
+        <label for="link-category-edit" class="category-input-edit">
+          <span class="link-category-edit">Choose Category : </span>
+
+          <select
+            name="linkCategoryEdit"
+            id="link-category-edit"
+            class="category-select-edit"
+          >
+            <!-- <option value="Javascript">Javascript</option>
+            <option value="Programming">Programming</option>
+            <option value="Knowledge">Knowledge</option>
+            <option value="Design">Design</option> -->
+          </select>
+        </label>
+
+        <input type="submit" value="Update List" class="link-edit-submit" />
+
+        <i
+          class="far fa-times-circle form-edit__close-edit"
+          id="link-edit-form-close"
+        ></i>
+      </form>
+    </div>
+
     <!-- Link category add modal box section -->
     <div class="category-add-modal" id="cat-add-modal">
       <form class="cat-add-form" id="cat-add-form">
@@ -315,6 +368,7 @@
         ></i>
       </form>
     </div>
+
     <script src="./js/index.js"></script>
   </body>
 </html>
