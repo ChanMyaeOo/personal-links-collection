@@ -1,0 +1,39 @@
+.category-add-modal {
+  @include modal-overlay;
+  visibility: visible;
+  opacity: 1;
+
+  .cat-add-form {
+    background: $color-white;
+    padding: 3rem;
+    width: 30%;
+    border-radius: 3px;
+    @include d-flex;
+    flex-direction: column;
+    position: relative;
+
+    &__close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      cursor: pointer;
+    }
+  }
+
+  .category-add-input {
+    margin: 2.5rem;
+    height: 3rem;
+    padding: 1rem;
+
+    &:focus {
+      border: 1px solid $color-grey;
+      outline: none;
+    }
+  }
+
+  .cat-add-submit {
+    padding: 0.5rem;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+}

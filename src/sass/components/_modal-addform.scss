@@ -1,14 +1,5 @@
 .data-add-modal {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
-  @include d-flex;
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s, opacity 0.5s;
+  @include modal-overlay;
 
   .form {
     @include d-flex;

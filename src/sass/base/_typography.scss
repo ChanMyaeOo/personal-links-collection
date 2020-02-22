@@ -114,3 +114,29 @@
     color: $color-blueviolet;
   }
 }
+
+// Link Category add form section
+.cat-add-form__title {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.cat-add-submit {
+  text-transform: uppercase;
+  font-size: $default-font-size;
+  font-weight: bold;
+  color: $color-grey;
+
+  &:hover {
+    color: $color-blueviolet;
+  }
+}
+
+.cat-add-form__close {
+  font-size: 2.5rem;
+  color: $color-grey;
+
+  &:hover {
+    color: $color-black;
+  }
+}
