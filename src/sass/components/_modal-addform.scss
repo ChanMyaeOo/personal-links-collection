@@ -6,6 +6,9 @@
   height: 100vh;
   background: rgba(0, 0, 0, 0.5);
   @include d-flex;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s;
 
   .form {
     @include d-flex;
@@ -76,4 +79,9 @@
       cursor: pointer;
     }
   }
+}
+
+.data-add-modal-active {
+  visibility: visible;
+  opacity: 1;
 }
