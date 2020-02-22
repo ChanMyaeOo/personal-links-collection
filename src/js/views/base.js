@@ -4,5 +4,8 @@ export const elements = {
   dataAddBtnEl: document.querySelector('#nav-add-btn'),
   catAddBtnEl: document.querySelector('#add-cat-btn'),
   catAddModalEl: document.querySelector('#cat-add-modal'),
-  closeCatFormEl: document.querySelector('#cat-add-form-close')
+  closeCatAddFormEl: document.querySelector('#cat-add-form-close'),
+  catRemoveBtnEl: document.querySelector('#remove-cat-btn'),
+  catRemoveModalEl: document.querySelector('#cat-remove-modal'),
+  closeCatRemoveFormEl: document.querySelector('#cat-remove-form-close')
 };

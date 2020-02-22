@@ -19,6 +19,16 @@ elements.catAddBtnEl.addEventListener('click', e => {
 });
 
 // Handle to close category add form
-elements.closeCatFormEl.addEventListener('click', e => {
+elements.closeCatAddFormEl.addEventListener('click', e => {
   elements.catAddModalEl.classList.remove('category-add-modal-active');
+});
+
+// Handle to open category remove form
+elements.catRemoveBtnEl.addEventListener('click', e => {
+  elements.catRemoveModalEl.classList.add('category-remove-modal-active');
+});
+
+// Handle to close category remove form
+elements.closeCatRemoveFormEl.addEventListener('click', e => {
+  elements.catRemoveModalEl.classList.remove('category-remove-modal-active');
 });

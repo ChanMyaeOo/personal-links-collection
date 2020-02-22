@@ -1,0 +1,43 @@
+.category-remove-modal {
+  @include modal-overlay;
+
+  .cat-remove-form {
+    background: $color-white;
+    padding: 3rem;
+    width: 30%;
+    border-radius: 3px;
+    @include d-flex;
+    flex-direction: column;
+    position: relative;
+
+    &__close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      cursor: pointer;
+    }
+  }
+
+  .category-remove-input {
+    margin: 2.5rem;
+    height: 3rem;
+    padding: 1rem;
+    border-radius: 3px;
+
+    &:focus {
+      border: 1px solid $color-grey;
+      outline: none;
+    }
+  }
+
+  .cat-remove-submit {
+    padding: 0.5rem;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+}
+
+.category-remove-modal-active {
+  visibility: visible;
+  opacity: 1;
+}
