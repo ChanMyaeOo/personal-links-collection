@@ -11,5 +11,6 @@ export const elements = {
   dataAddFormEl: document.querySelector('#data-add-form'),
   cardWrapEl: document.querySelector('#card-wrap'),
   catAddFormEl: document.querySelector('#cat-add-form'),
-  categoryContent: document.querySelector('#category-content')
+  categoryContent: document.querySelector('#category-content'),
+  catRemoveFormEl: document.querySelector('#cat-remove-form')
 };

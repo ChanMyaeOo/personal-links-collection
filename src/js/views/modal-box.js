@@ -1,6 +1,6 @@
 import icon from '../../img/icons.svg';
 import { elements } from './base';
-import { addLinkData, addLinkCategory } from '../index';
+import { addLinkData, addLinkCategory, removeLinkCategory } from '../index';
 
 // Handle to open link data add form
 elements.dataAddBtnEl.addEventListener('click', e => {
@@ -116,3 +116,15 @@ export const renderCategory = list => {
     elements.categoryContent.insertAdjacentHTML('beforeend', markup);
   });
 };
+
+// Handle for removing category
+elements.catRemoveFormEl.addEventListener('submit', e => {
+  e.preventDefault();
+  const category = e.target.elements.catRemoveInput.value;
+
+  if (category) {
+    removeLinkCategory(category);
+    e.target.elements.catRemoveInput.value = '';
+    elements.catRemoveModalEl.classList.remove('category-remove-modal-active');
+  }
+});

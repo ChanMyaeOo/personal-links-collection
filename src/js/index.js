@@ -41,3 +41,17 @@ export const addLinkCategory = list => {
   elements.categoryContent.innerHTML = '';
   renderCategory(categoryList);
 };
+
+// For removing category
+export const removeLinkCategory = category => {
+  const categoryIndex = categoryList.findIndex(data => {
+    return data === category;
+  });
+
+  if (categoryIndex !== -1) {
+    categoryList.splice(categoryIndex, 1);
+
+    elements.categoryContent.innerHTML = '';
+    renderCategory(categoryList);
+  }
+};
