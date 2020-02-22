@@ -2,7 +2,7 @@ import '../sass/main.scss';
 import './views/base';
 import './views/modal-box';
 
-import { renderDataCard } from './views/modal-box';
+import { renderDataCard, renderCategory } from './views/modal-box';
 import { elements } from './views/base';
 
 let linkData = [
@@ -20,6 +20,8 @@ let linkData = [
   }
 ];
 
+let categoryList = ['All', 'Programming', 'Design'];
+
 // For adding data to the linkData
 export const addLinkData = list => {
   linkData.push(list);
@@ -30,4 +32,12 @@ export const addLinkData = list => {
   renderDataCard(linkData);
 };
 
+renderCategory(categoryList);
 renderDataCard(linkData);
+
+// For adding category
+export const addLinkCategory = list => {
+  categoryList.push(list);
+  elements.categoryContent.innerHTML = '';
+  renderCategory(categoryList);
+};

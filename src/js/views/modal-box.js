@@ -1,6 +1,6 @@
 import icon from '../../img/icons.svg';
 import { elements } from './base';
-import { addLinkData } from '../index';
+import { addLinkData, addLinkCategory } from '../index';
 
 // Handle to open link data add form
 elements.dataAddBtnEl.addEventListener('click', e => {
@@ -91,5 +91,28 @@ export const renderDataCard = list => {
     `;
 
     elements.cardWrapEl.insertAdjacentHTML('beforeend', markup);
+  });
+};
+
+// Handle for adding category
+elements.catAddFormEl.addEventListener('submit', e => {
+  e.preventDefault();
+  const category = e.target.elements.catAddInput.value;
+
+  if (category) {
+    addLinkCategory(category);
+    e.target.elements.catAddInput.value = '';
+    elements.catAddModalEl.classList.remove('category-add-modal-active');
+  }
+});
+
+// Rendering category
+export const renderCategory = list => {
+  list.forEach(data => {
+    const markup = `
+            <button>${data}</button>
+        `;
+
+    elements.categoryContent.insertAdjacentHTML('beforeend', markup);
   });
 };
