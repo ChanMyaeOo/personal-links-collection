@@ -1,34 +1,33 @@
 import '../sass/main.scss';
 import './views/base';
+import './views/modal-box';
 
+import { renderDataCard } from './views/modal-box';
 import { elements } from './views/base';
 
-// Handle to open link data add form
-elements.dataAddBtnEl.addEventListener('click', e => {
-  elements.dataAddModalEl.classList.add('data-add-modal-active');
-});
+let linkData = [
+  {
+    title: 'coding challenge',
+    description: 'Free code camp',
+    url: 'www.freecodecamp.com',
+    category: 'Programming'
+  },
+  {
+    title: 'coding challenge',
+    description: 'Free code camp',
+    url: 'www.freecodecamp.com',
+    category: 'Programming'
+  }
+];
 
-// Handle to close link data add form
-elements.closeFormEl.addEventListener('click', e => {
-  elements.dataAddModalEl.classList.remove('data-add-modal-active');
-});
+// For adding data to the linkData
+export const addLinkData = list => {
+  linkData.push(list);
+  console.log(linkData);
 
-// Handle to open category add form
-elements.catAddBtnEl.addEventListener('click', e => {
-  elements.catAddModalEl.classList.add('category-add-modal-active');
-});
+  // For rendering data card
+  elements.cardWrapEl.innerHTML = '';
+  renderDataCard(linkData);
+};
 
-// Handle to close category add form
-elements.closeCatAddFormEl.addEventListener('click', e => {
-  elements.catAddModalEl.classList.remove('category-add-modal-active');
-});
-
-// Handle to open category remove form
-elements.catRemoveBtnEl.addEventListener('click', e => {
-  elements.catRemoveModalEl.classList.add('category-remove-modal-active');
-});
-
-// Handle to close category remove form
-elements.closeCatRemoveFormEl.addEventListener('click', e => {
-  elements.catRemoveModalEl.classList.remove('category-remove-modal-active');
-});
+renderDataCard(linkData);

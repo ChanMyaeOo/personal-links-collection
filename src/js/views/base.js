@@ -7,5 +7,7 @@ export const elements = {
   closeCatAddFormEl: document.querySelector('#cat-add-form-close'),
   catRemoveBtnEl: document.querySelector('#remove-cat-btn'),
   catRemoveModalEl: document.querySelector('#cat-remove-modal'),
-  closeCatRemoveFormEl: document.querySelector('#cat-remove-form-close')
+  closeCatRemoveFormEl: document.querySelector('#cat-remove-form-close'),
+  dataAddFormEl: document.querySelector('#data-add-form'),
+  cardWrapEl: document.querySelector('#card-wrap')
 };
